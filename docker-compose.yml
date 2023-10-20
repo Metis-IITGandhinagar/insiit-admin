@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    container_name: insiit-admin
+    ports:
+      - 3000:5173
+    volumes:
+      - .:/app
+      - /app/node_modules
