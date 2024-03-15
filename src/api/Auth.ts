@@ -1,1 +1,2 @@
-export const isUserLoggedIn = async () => {};
+export const accessTokenIsValid = async () => false;
+export const renewAccessToken = async () => {};
