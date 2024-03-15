@@ -1,4 +1,4 @@
-import { Box, Button, TextField, Typography } from "@mui/material";
+import { Box, Button, TextField } from "@mui/material";
 
 interface AddMessRouteProps {}
 
@@ -86,6 +86,27 @@ const AddMessRoute: React.FC<AddMessRouteProps> = () => {
                 label="End"
                 name="lunch-end"
                 autoComplete="lunch-end"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <span className="text-lg">Snacks</span>
+            <div className="flex gap-4">
+              <TextField
+                margin="normal"
+                required
+                id="snacks-start"
+                label="Start"
+                name="snacks-start"
+                autoComplete="snacks-start"
+              />
+              <TextField
+                margin="normal"
+                required
+                id="snacks-end"
+                label="End"
+                name="snacks-end"
+                autoComplete="snacks-end"
               />
             </div>
           </div>

@@ -1,20 +1,20 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
-import { CookieNames, getCookie } from "../utils/BrowserUtils";
+// import { CookieNames, getCookie } from "../utils/BrowserUtils";
 import APIRoutes from "./APIRoutes";
 import { accessTokenIsValid, renewAccessToken } from "./Auth";
 
 const AXIOS_REQUEST_TIMEOUT = 1e3 * 10;
 
-export const getAPIConfiguration = (noAuthorization?: boolean): AxiosRequestConfig => ({
+export const getAPIConfiguration = (/*noAuthorization?: boolean*/): AxiosRequestConfig => ({
   timeout: AXIOS_REQUEST_TIMEOUT,
-  baseURL: "http://localhost:5000/",
-  headers:
-    (!noAuthorization && {
-      Authorization: `${getCookie(CookieNames.ACCESS_TOKEN_TYPE_COOKIE_NAME)} ${getCookie(
-        CookieNames.ACCESS_TOKEN_COOKIE_NAME
-      )}`,
-    }) ||
-    {},
+  baseURL: "https://insiit-api.onrender.com/mess",
+  // headers:
+  //   (!noAuthorization && {
+  //     Authorization: `${getCookie(CookieNames.ACCESS_TOKEN_TYPE_COOKIE_NAME)} ${getCookie(
+  //       CookieNames.ACCESS_TOKEN_COOKIE_NAME
+  //     )}`,
+  //   }) ||
+  //   {},
 });
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
