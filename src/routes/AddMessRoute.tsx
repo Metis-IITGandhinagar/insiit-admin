@@ -1,21 +1,45 @@
 import { Box, Button, TextField } from "@mui/material";
+import Mess from "../types/Mess";
+import { addMess } from "../utils/MessUtils";
 
 interface AddMessRouteProps {}
 
 const AddMessRoute: React.FC<AddMessRouteProps> = () => {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
-    console.log({
-      name: data.get("name"),
-      location: data.get("location"),
-      breakfastStart: data.get("breakfast-start"),
-      breakfastEnd: data.get("breakfast-end"),
-      lunchStart: data.get("lunch-start"),
-      lunchEnd: data.get("lunch-end"),
-      dinnerStart: data.get("dinner-start"),
-      dinnerEnd: data.get("dinner-end"),
-    });
+    const mess: Mess = {
+      name: data.get("name") as string,
+      landmark: data.get("location") as string,
+      timings: {
+        breakfast: {
+          start: data.get("breakfast-start") as string,
+          end: data.get("breakfast-end") as string,
+        },
+        lunch: {
+          start: data.get("lunch-start") as string,
+          end: data.get("lunch-end") as string,
+        },
+        snacks: {
+          start: data.get("snacks-start") as string,
+          end: data.get("snacks-end") as string,
+        },
+        dinner: {
+          start: data.get("dinner-start") as string,
+          end: data.get("dinner-end") as string,
+        },
+      },
+      rating: 0,
+      image: "",
+      location: {
+        latitude: 0,
+        longitude: 0,
+      },
+    };
+
+    console.log(mess);
+
+    console.log(await addMess(mess));
   };
 
   return (

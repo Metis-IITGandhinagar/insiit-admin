@@ -1,10 +1,15 @@
 export default interface Mess {
-  id: number;
+  id?: number;
   name: string;
   landmark: string;
   timings: MessTimings;
   rating: number;
-  menu: MessMenu;
+  menu?: MessMenu;
+  location: {
+    latitude: number;
+    longitude: number;
+  };
+  image: string;
 }
 
 export interface MessTimings {
