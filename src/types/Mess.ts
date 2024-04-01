@@ -46,6 +46,7 @@ export interface MessMenu {
 }
 
 export interface MessMenuItems {
+  [index: string]: MessMenuItem[];
   breakfast: MessMenuItem[];
   lunch: MessMenuItem[];
   snacks: MessMenuItem[];

@@ -4,6 +4,7 @@ import LoginRoute from "./routes/LoginRoute";
 import MessRoute from "./routes/MessRoute";
 import AddMessRoute from "./routes/AddMessRoute";
 import Sidebar from "./components/Sidebar";
+import EditMenuRoute from "./routes/EditMenuRoute";
 
 const App = () => {
   return (
@@ -19,7 +20,7 @@ const App = () => {
               <Route path="/" element={<div>Home</div>} />
               <Route path="/mess" element={<MessRoute />} />
               <Route path="/mess/add" element={<AddMessRoute />} />
-              <Route path="/mess/menu/edit" element={<AddMessRoute />} />
+              <Route path="/mess/menu/edit" element={<EditMenuRoute />} />
             </Routes>
           </div>
         </div>

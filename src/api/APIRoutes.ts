@@ -7,6 +7,7 @@ enum APIRoutes {
   LOGOUT = "/auth/logout",
 
   MESS = "/mess",
+  UPDATE_MESS_MENU = "/mess/MESS_ID/menu/MENU_ID",
 }
 
 export default APIRoutes;

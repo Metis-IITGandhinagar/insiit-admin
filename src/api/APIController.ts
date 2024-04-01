@@ -3,7 +3,7 @@ import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 import APIRoutes from "./APIRoutes";
 import { accessTokenIsValid, renewAccessToken } from "./Auth";
 
-const AXIOS_REQUEST_TIMEOUT = 1e3 * 10;
+const AXIOS_REQUEST_TIMEOUT = 1e3 * 100;
 
 export const getAPIConfiguration = (noAuthorization?: boolean): AxiosRequestConfig => ({
   timeout: AXIOS_REQUEST_TIMEOUT,
