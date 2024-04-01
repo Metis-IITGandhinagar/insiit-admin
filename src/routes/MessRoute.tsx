@@ -13,7 +13,7 @@ const MessRoute: React.FC<MessRouteProps> = () => {
         <ActionCard actionLink="/mess/add" actionName="Add Mess" icon={<AddBusinessIcon />} />
         <ActionCard actionLink="/mess/add" actionName="Update Mess Details" icon={<AddBusinessIcon />} />
         <ActionCard actionLink="/mess/add" actionName="Delete Mess" icon={<AddBusinessIcon />} />
-        <ActionCard actionLink="/mess/add" actionName="Manage Mess Menu" icon={<AddBusinessIcon />} />
+        <ActionCard actionLink="/mess/menu/edit" actionName="Manage Mess Menu" icon={<AddBusinessIcon />} />
       </div>
     </div>
   );
